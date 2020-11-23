@@ -1,0 +1,5 @@
+cloudpickle
+opencv-python
+networkx==2.4
+gym==0.12.1
+atari-py
