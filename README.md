@@ -34,7 +34,7 @@ python control/main.py --num-frames 3000000   --algo ppo --use-gae --lr 3e-4 --c
 
 ## Cite
 
-If you found our paper useful or interesting, please cite it:
+If you found our paper useful or interesting, please consider citing it:
 
 ```bash
 @misc{klissarov2020reward,
