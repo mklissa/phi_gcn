@@ -51,7 +51,9 @@ def update_graph(model, optimizer, features, adj, rew_states, loss, args,envs):
         optimizer.zero_grad()
         output = model(features, adj)
         loss_train = F.nll_loss(output[idx_train], labels[idx_train])
-        loss_train +=  args.gcn_lambda * torch.mm(laplacian,torch.nn.functional.softmax(output,dim=1)).sum()
+        soft_out= torch.unsqueeze(torch.nn.functional.softmax(output,dim=1)[:,1],1)
+        loss_reg  = torch.mm(torch.mm(soft_out.T,laplacian),soft_out)
+        loss_train +=  args.gcn_lambda * loss_reg.squeeze()
         loss_train.backward()
         optimizer.step()
 
