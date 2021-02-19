@@ -37,12 +37,15 @@ python control/main.py --num-frames 3000000   --algo ppo --use-gae --lr 3e-4 --c
 If you found our paper useful or interesting, please consider citing it:
 
 ```bash
-@misc{klissarov2020reward,
-      title={Reward Propagation Using Graph Convolutional Networks}, 
-      author={Martin Klissarov and Doina Precup},
-      year={2020},
-      eprint={2010.02474},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@inproceedings{NEURIPS2020_97062741,
+ author = {Klissarov, Martin and Precup, Doina},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {12895--12908},
+ publisher = {Curran Associates, Inc.},
+ title = {Reward Propagation Using Graph Convolutional Networks},
+ url = {https://proceedings.neurips.cc/paper/2020/file/970627414218ccff3497cb7a784288f5-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
